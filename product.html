@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+<link rel="stylesheet" href="/css/styles.css">
+<title>EKK cuddles Creations</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+main {
+  position: relative;
+  width: calc(min(90rem, 90%));
+  margin: 0 auto;
+  min-height: 100vh;
+  column-gap: 3rem;
+  padding-block: min(20vh, 3rem);
+  background-color: ;
+}
+
+.bg {
+  position: fixed;
+  top: -4rem;
+  left: -12rem;
+  z-index: -1;
+  opacity: 0;
+}
+
+.bg2 {
+  position: fixed;
+  bottom: -2rem;
+  right: -3rem;
+  z-index: -1;
+  width: 9.375rem;
+  opacity: 0;
+}
+
+main > div span {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  color: #717171;
+}
+
+main > div h1 {
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+  background-color: #005baa;
+  background-image: linear-gradient(45deg, #005baa, #000000);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+main > div hr {
+  display: block;
+  background: #005baa;
+  height: 0.25rem;
+  width: 6.25rem;
+  border: none;
+  margin: 1.125rem 0 1.875rem 0;
+}
+
+main > div p {
+  line-height: 1.6;
+}
+
+main a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #717171;
+  font-weight: 500;
+  background: #333;
+  border-radius: 3.125rem;
+  transition: 0.3s ease-in-out;
+}
+
+main > div > a {
+  border: 2px solid #c2c2c2;
+  margin-top: 2.188rem;
+  padding: 0.625rem 1.875rem;
+}
+
+main > div > a:hover {
+  border: 0.125rem solid #005baa;
+  color: #005baa;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 3.125rem;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+.swiper-pagination {
+  bottom: 1.25rem !important;
+}
+
+.swiper-slide {
+  width: 18.75rem;
+  height: 28.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: self-start;
+}
+
+.swiper-slide h2 {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-bottom: 0.625rem;
+  padding: 0 0 0 1.563rem;
+  text-transform: uppercase;
+}
+
+.swiper-slide p {
+  color: #dadada;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding: 0 1.563rem;
+  line-height: 1.6;
+  font-size: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.swiper-slide a {
+  margin: 1.25rem 1.563rem 3.438rem 1.563rem;
+  padding: 0.438em 1.875rem;
+  font-size: 0.9rem;
+}
+
+.swiper-slide a:hover {
+  color: #005baa;
+}
+
+.swiper-slide div {
+  display: none;
+  opacity: 0;
+  padding-bottom: 0.625rem;
+}
+
+.swiper-slide-active div {
+  display: block;
+  opacity: 1;
+}
+
+.swiper-slide--one {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://i.ebayimg.com/images/g/2qYAAOSwdHVjIk8g/s-l1200.jpg") no-repeat 50% 50%/cover;
+}
+
+/* Add additional slides */
+.swiper-slide--two {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://down-ph.img.susercontent.com/file/sg-11134201-7qvd5-lf0m003e4ltrda") no-repeat 50% 50%/cover;
+}
+
+.swiper-slide--three {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://i.redd.it/i-crocheted-a-cover-for-my-kobo-clara-hd-v0-w1t7vsfmtub81.jpg?width=3000&format=pjpg&auto=webp&s=065dd67747167f798dcf522a662e5a73de1c2b69") no-repeat 50% 50%/cover;
+}
+
+.swiper-slide--four {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://s2.dmcdn.net/v/D2VWd1Mbe8xXKPLy6/x1080") no-repeat 50% 50%/cover;
+}
+
+.swiper-slide--five {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://i.pinimg.com/736x/cf/a5/ba/cfa5ba70cd5a9430eba58c9dfe30545c.jpg") no-repeat 50% 50%/cover;
+}
+.swiper-slide--six {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://i0.wp.com/helloyellowyarn.com/wp-content/uploads/2016/04/5-petal-flower-hyy.jpg?ssl=1") no-repeat 50% 50%/cover;
+}
+.swiper-slide--seven {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://www.knitcroaddict.com/wp-content/uploads/2020/08/how-to-crochet-flower-10.png") no-repeat 50% 50%/cover;
+}
+.swiper-slide--eight {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://hookok.com/wp-content/uploads/2023/05/529flowers-11.webp") no-repeat 50% 50%/cover;
+}
+.swiper-slide--nine {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://hookok.com/wp-content/uploads/2023/11/1127buildyourownbouquet-3-scaled.jpg") no-repeat 50% 50%/cover;
+}
+.swiper-slide--ten {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://i.etsystatic.com/32366930/r/il/466ac5/4800064118/il_fullxfull.4800064118_gopo.jpg") no-repeat 50% 50%/cover;
+}
+
+.swiper-slide--eleven{
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://crochetcreationlovers.com/wp-content/uploads/2023/10/Snapshot_34.png") no-repeat 50% 50%/cover;
+}
+.swiper-slide--twelve{
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("https://www.blingcute.com/cdn/shop/products/il_794xN.3438840425_hqz7.jpg?v=1645427453") no-repeat 50% 50%/cover;
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+@media screen and (min-width: 48rem) {
+  main {
+    display: flex;
+    align-items: center;
+  }
+
+  .bg,
+.bg2 {
+    opacity: 0.1;
+  }
+}
+@media screen and (min-width: 93.75rem) {
+  .swiper {
+    width: 85%;
+  }
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.buy-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px; 
+  height: 120px; 
+  background-color: #333; 
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.buy-button:hover {
+  background-color: #555;
+}
+</style>
+</head>
+
+<body >
+  <main>
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        
+        <div class="swiper-slide swiper-slide--one"></div>
+        <div class="swiper-slide swiper-slide--two"></div>
+        <div class="swiper-slide swiper-slide--three"></div>
+        <div class="swiper-slide swiper-slide--four"></div>
+        <div class="swiper-slide swiper-slide--five"></div><div class="swiper-slide swiper-slide--six"></div>
+        <div class="swiper-slide swiper-slide--seven"></div>
+        <div class="swiper-slide swiper-slide--eight"></div>
+        <div class="swiper-slide swiper-slide--nine"></div>
+        <div class="swiper-slide swiper-slide--ten"></div>
+        <div class="swiper-slide swiper-slide--eleven"></div>
+        <div class="swiper-slide swiper-slide--twelve"></div>
+      </div>
+      
+      <div class="swiper-pagination"></div>
+    </div>
+    <button class="buy-button"> Buy now!!</button>
+  </main>
+  <footer>
+    <p>
+      Welcome to EKK Crochet Creations, where warmth, style, and creativity intertwine to bring you a world of handmade crochet wonders. Founded by a trio of friends - Eve, Ken, and Keziah - our passion for crochet craftsmanship shines through in every stitch.
+      <br><br>
+      At EKK Crochet Creations, we specialize in an array of meticulously crafted crochet products, including charming bonnets, stylish bags, adorable toys, and elegant bouquets. Each item is lovingly handmade with premium yarns, ensuring both durability and softness.
+      <br><br>
+      In addition to our signature crochet creations, we also offer a delightful selection of hair accessories, adding a touch of handmade charm to your everyday look.
+      <br><br>
+      Whether you're seeking a cozy companion, a unique gift, or a trendy accessory, EKK Crochet Creations has something special just for you. Join us in celebrating the artistry of crochet and indulge in the warmth and beauty of our handmade creations.
+    </p><br><br>
+    <p>Your cute members:
+        <br>Ken Laurence Valdevia<br>
+Kristal Eve Agua<br>
+Keziah Jean Donaire</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+  <script src="/js/main.js"></script>
+<script>var swiper = new Swiper(".swiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 3,
+    slideShadows: true
+  },
+  keyboard: {
+    enabled: true
+  },
+  mousewheel: {
+    thresholdDelta: 70
+  },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 1
+    },
+    1024: {
+      slidesPerView: 2
+    },
+    1560: {
+      slidesPerView: 3
+    }
+  }
+});
+</script>
+</body>
+</html>

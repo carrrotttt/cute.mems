@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome Page</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://c1.wallpaperflare.com/preview/354/23/616/hare-evil-snowball-film-character.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; 
+    font-family: Arial, sans-serif; 
+  }
+  
+  #welcomeText {
+    margin-bottom: 20px;
+    font-size: 24px; 
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    
+  }
+  
+  #enterButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #enterButton:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+</style>
+</head>
+<body>
+
+<p id="welcomeText">Welcome to EKK Cuddles Creations</p><br>
+
+<button id="enterButton" onclick="redirectToProductPage()">Enter</button>
+
+<script>
+  function redirectToProductPage() {
+    // Redirect to the specified product page
+    window.location.href = "file:///home/chronos/u-5c8abfe71efe0c06a248bf44504cdddb5c3b49dc/MyFiles/Downloads/valdevia,Agua,Donaire/product.html";
+  }
+</script>
+
+</body>
+</html>
